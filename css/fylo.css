@@ -7,10 +7,10 @@ The designs were created to the following widths:
 Colors
 
 Primary
-- Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
-- Dark Blue (main background): hsl(218, 28%, 13%)
-- Dark Blue (footer background): hsl(216, 53%, 9%)
-- Dark Blue (testimonials background): hsl(219, 30%, 18%)
+- Dark Blue-1 (intro and email sign up background): hsl(217, 28%, 15%)
+- Dark Blue-2 (main background): hsl(218, 28%, 13%)
+- Dark Blue-3 (footer background): hsl(216, 53%, 9%)
+- Dark Blue-4 (testimonials background): hsl(219, 30%, 18%)
 
 Accent
 - Cyan (inside call-to-action gradient): hsl(176, 68%, 64%)
@@ -45,21 +45,249 @@ For the social icons, you can use a font icon library. Some suggestions can be f
     padding: 0;
     box-sizing: border-box;
 }
+ 
+:root{
+    --dark-blue-1 : hsl(217, 28%, 15%);
+    --dark-blue-2: hsl(218, 28%, 13%);
+    --dark-blue-3 : hsl(216, 53%, 9%);
+    --dark-blue-4: hsl(219, 30%, 18%);
+    --accent-cyan: hsl(176, 68%, 64%);
+    --accent-blue: hsl(198, 60%, 50%);
+}
 
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    color: white;
+    width: 100%;
+    font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Raleway', san-serif;
+    font-weight: 700;
 }
 
 /* Design for mobile  375px*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-blue-1);
+    padding: 2rem;
+}
 
+.nav-brand{
+    width: 20%;
+}
 
+.navlinks{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+#hero-section{
+    background-color: var(--dark-blue-1);
+}
+
+.hero-items, .container{
+    width: 80%;
+    margin:-5px auto;
+    text-align: center;
+}
+
+.hero-items img{
+    width: 100%;
+}
+
+h1{
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+ .hero-items p{
+     /* font-size: 0.86rem; */
+     padding: 1rem 0;
+ }
+button{
+    background: linear-gradient(50deg, var(--accent-cyan), var(--accent-blue));
+    margin: 0rem 0 2rem;
+    color: white;
+    border: transparent;
+    border-radius: 85px;
+    padding: 15px 70px;
+}
+
+#info{
+    /* background-image: url(../images/bg-curvy-mobile.svg); */
+    background-color: var(--dark-blue-2);
+    padding: 2rem 0 4rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info-card{
+    width: 100%;
+}
+
+.info-card img{
+    margin: 1rem 0;
+}
+
+ h2{
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+ }
+
+ .info-card p{
+     padding-bottom: 3rem;
+ }
+
+ #stay-productive{
+     background-color: var(--dark-blue-2);
+ }
+ #stay-productive p{
+    padding-bottom: 0.86rem;
+ }
+ #stay-productive a{
+     text-decoration: none;
+     color: var(--accent-cyan);
+     border-bottom: 1px solid var(--accent-cyan);
+     padding-bottom: 0.3rem;
+     display: flex;
+     align-items: center;
+     width: 50%;
+ }
+
+ .productive-container{
+    width: 90%;
+    text-align: left;
+    margin: 0 auto;
+    padding: 3rem 0;
+ }
+
+ .stay-productive a img{
+     padding-left: 7px;
+ }
+
+ #testimonials{
+    background-color: var(--dark-blue-2);
+    padding: 4rem 0 50vh;
+ }
+
+ .t-container{
+     width: 80%;
+     margin: 0 auto;
+ }
+
+ .t-cards{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-direction: column;
+     height: auto;
+ }
+
+ .t-card{
+     padding: 1.2rem;
+     border-radius: 7px;
+     box-shadow: 2px 2px 20px 2px var(--dark-blue-4);
+     margin-bottom: 1.5rem;
+ }
+
+ .t-card p{
+     padding: 0.4rem 0  0;
+ }
+
+ .profile{
+    display: flex;
+    padding: 1rem 0;
+ }
+
+ .profile-img img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+ }
+
+ .profile-txt{
+     margin-left: 10px;
+ }
+
+ .profile-txt p{
+     font-size: 11px;
+ }
+
+#early-access{
+    background-color: var(--dark-blue-1);
+    border-radius: 5px;
+    width: 90%;
+    margin: -45% auto;
+}
+
+.access-text{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+ 
+.access-text p{
+    padding: 0.625rem 0;
+}
+ form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    padding-top: 1rem;
+    width: 100%;
+ }
+
+input, form button{
+    border: transparent;
+    border-radius: 85px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+input{
+    padding: 15px 0px 15px 25px;
+}
 
 /* Design for desktop screens of  <= 1440px */
- @media screen and (max-width: 1440px) {
-     
+ 
+@media screen and (min-width:475px) and (max-width: 1440px) {
+    .navlinks{
+        width: 25%;
+    }
+    .hero-items{
+        width: 40%;
+    }
+    .container{
+        flex-direction: row;
+    }
+    .info-card{
+        width: 40%;
+    }
+    form{
+        flex-direction: row;
+    }    
+    form input{
+        width: 60%;
+    }
+    form button{
+        width:30%;
+    }
  }
