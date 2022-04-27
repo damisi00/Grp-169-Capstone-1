@@ -589,4 +589,15 @@ form button{
     .socials{
         margin-left: 5rem;
     }
+
+    .access-container{
+        position: absolute;
+        left: 25px;
+        top: -65px;
+        padding: 1rem ;
+    }
+    
+    .socials{
+        margin-left: 8rem;
+    }
 }
