@@ -101,9 +101,6 @@ h1, h2, h3, h4, h5, h6{
 footer{
     width: 100%;
 }
-footer .image{
-    margin-top: 10rem;
-}
 
 footer li a{
     text-decoration: none;
@@ -117,10 +114,21 @@ footer li{
     padding-top: 10px;
 }
 
-li a:hover{
+li a:hover, .navlinks a:hover{
     color: aqua;
 }
 
+a button:hover{
+    background-color: var(--accent-blue);
+    cursor: pointer;
+    border-radius: 85px;
+}
+
+.inner a:hover{
+    font-weight: 700;
+    color: #fff;
+}
+ 
 footer li:first-child{
     padding-top: 0px;
 }
@@ -201,7 +209,7 @@ h1{
      /* font-size: 0.86rem; */
      padding: 1rem 0;
  }
-button{
+ button{
     background: linear-gradient(50deg, var(--accent-cyan), var(--accent-blue));
     margin: 0rem 0 2rem;
     color: white;
@@ -276,7 +284,7 @@ button{
 
  #testimonials{
     /* background-color: var(--dark-blue-2); */
-    padding: 5rem 0 10rem;
+    padding: 5rem 0 ;
     margin-top: -5px;
    
  }
@@ -325,7 +333,7 @@ button{
  }
 
 #early-access{
-    /* background-color: var(--dark-blue-3); */
+    padding-bottom: 3rem;
     
 }
 
@@ -334,7 +342,7 @@ button{
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 5px;
     width: 90%;
-    margin: 0 auto -35%;
+    margin: 0 auto;
     z-index: 3;
 }
 
@@ -354,8 +362,8 @@ button{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 30vh;
-    padding-top: 1rem;
+    height: 25vh;
+    padding: 1rem 0;
     width: 100%;
  }
 
@@ -428,9 +436,6 @@ form button{
     .t-card{
         margin-right: 1rem;
     }
-    .access-container{
-        margin-bottom: -10%;
-    }
     form{
         flex-direction: row;
         height: auto;
@@ -440,7 +445,7 @@ form button{
     }
     footer .image{
         width: 85%;
-        margin:8rem auto 0;
+        margin:2rem auto 0;
     }
     footer .image img{
         width: 10%;
